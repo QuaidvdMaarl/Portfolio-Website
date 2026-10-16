@@ -23,7 +23,7 @@ return (
             <Link
               key={link.href}
               href={link.href}
-              className={`pt-3 pb-3 font-bold text-[20px] text-white text-center hover:bg-[#5c6567] cursor-pointer ${
+              className={`pt-3 pb-3 font-bold text-sm md:text-base text-white text-center hover:bg-[#5c6567] cursor-pointer ${
                 pathname == link.href && "underline"
               }`}
             >
