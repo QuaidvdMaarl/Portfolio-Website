@@ -67,29 +67,29 @@ export const images = {
     },
 
     DiamondProfile: {
-        className: "animate-spin animate-spin:active absolute top-185 left-200 z-1 transition-transform duration-300 hover:scale-110",
+        className: "animate-spin animate-spin:active z-1 transition-transform duration-300 hover:scale-110",
         src: "/glossy-Quaid.png",
         alt: "Diamonds picture",
-        width: 300,
-        height: 300
+        width: 100,
+        height: 100
     },
 
     DiamondVoorUit: {
-        className: "absolute top-50 left-90 z-1 transition-transform duration-300 hover:scale-110",
+        className: "transition-transform duration-300 hover:scale-110",
         src: "/VoorUit-glossy.png",
         alt: "Diamonds picture",
         width: 500,
         height: 500
     },    
     DiamondTemplate1: {
-        className: "absolute top-25 right-0  z-1 transition-transform duration-300 hover:scale-110",
+        className: "transition-transform duration-300 hover:scale-110",
         src: "/glossy-diamond.png",
         alt: "Diamonds picture",
         width: 400,
         height: 400
     },
     DiamondTemplate2: {
-        className: "absolute top-25 left-20 opacity-80 transition-transform duration-300 hover:scale-110",
+        className: "transition-transform duration-300 hover:scale-110",
         src: "/glossy-diamond.png",
         alt: "Diamonds picture",
         width: 400,

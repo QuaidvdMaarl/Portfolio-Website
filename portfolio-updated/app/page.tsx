@@ -12,11 +12,24 @@ export default function Home() {
     <main>
       <section className="grid min-h-screen grid-cols-1 md:grid-cols-2 bg-[url(/backdrop-image.png)] bg-cover bg-local bg-center">
         <div>
-          <p className="pt-20 pl-30 text-[80px] font-bold">Portfolio</p>
-          <p className="pl-30 text-[25px] italic">Quaid van der Maarl</p>
+          <section className="grid grid-cols-2 md:grid-cols-1">
+            <div>
+              <p className="pt-5 md:pt-20 pl-5 md:pl-30 text-[30px] md:text-[80px] font-bold">
+                Portfolio
+              </p>
+              <p className="pl-5 md:pl-30 text-[15px] md:text-[25px] italic">
+                Quaid van der Maarl
+              </p>
+            </div>
+            <div className="md:hidden pt-2 flex justify-end">
+              <Image {...images.DiamondProfile} />
+            </div>{" "}
+          </section>
           <hr></hr>
-          <p className="pt-5 pl-30 text-[30px] font-bold">About</p>
-          <p className="pt-5 pl-30 text-[20px]">
+          <p className="pt-5 pl-5 md:pl-30 text-[15px] md:text-[30px] font-bold">
+            About
+          </p>
+          <p className="md:pt-5 pl-5 md:pl-30 text-[12px] md:text-[20px]">
             I'm an IT student with an interest in solving practical problems
             with technology. Developing solutions that contribute to society is
             something I'm passionate about. During my studies, I've gained
@@ -25,7 +38,9 @@ export default function Home() {
             principles of programming. Right now, I'm looking for opportunities
             to apply my skills and make a positive impact.
           </p>
-          <p className="pt-10 pl-30 text-[30px] font-bold">Skills</p>
+          <p className="pt-5 md:pt-10 pl-5 md:pl-30 text-[15px] md:text-[30px] font-bold">
+            Skills
+          </p>
           <section className="grid grid-cols-4 pt-5 pr-90 pl-30">
             <Image
               {...images.cSharp}
@@ -65,8 +80,10 @@ export default function Home() {
               onMouseLeave={HandleMouseLeave}
             />
           </section>
-          <p className="pt-30 pl-30 text-[30px] font-bold">View my resume</p>
-          <ul className="list-disc pl-35 text-[20px] underline">
+          <p className="pt-5 md:pt-30 pl-5 md:pl-30 text-[15px] md:text-[30px] font-bold">
+            View my resume
+          </p>
+          <ul className="list-disc pl-10 md:pl-35 text-[12px] md:text-[20px] underline">
             <li>Resume (Dutch)</li>
             <li>Resume (English)</li>
           </ul>
