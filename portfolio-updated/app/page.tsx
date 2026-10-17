@@ -14,14 +14,14 @@ export default function Home() {
         <div>
           <section className="grid grid-cols-2 md:grid-cols-1">
             <div>
-              <p className="pt-5 md:pt-20 pl-5 md:pl-30 text-[30px] md:text-[80px] font-bold">
+              <p className="pt-5 pl-5 md:pl-30 text-[30px] md:text-[80px] font-bold">
                 Portfolio
               </p>
               <p className="pl-5 md:pl-30 text-[15px] md:text-[25px] italic">
                 Quaid van der Maarl
               </p>
             </div>
-            <div className="md:hidden pt-2 flex justify-end">
+            <div className="md:hidden pt-2 pr-5 flex justify-end">
               <Image {...images.DiamondProfile} />
             </div>{" "}
           </section>
@@ -29,7 +29,7 @@ export default function Home() {
           <p className="pt-5 pl-5 md:pl-30 text-[15px] md:text-[30px] font-bold">
             About
           </p>
-          <p className="md:pt-5 pl-5 md:pl-30 text-[12px] md:text-[20px]">
+          <p className="md:pt-2 pl-5 pr-5 md:pl-30 text-[12px] md:text-[16px]">
             I'm an IT student with an interest in solving practical problems
             with technology. Developing solutions that contribute to society is
             something I'm passionate about. During my studies, I've gained
@@ -41,7 +41,7 @@ export default function Home() {
           <p className="pt-5 md:pt-10 pl-5 md:pl-30 text-[15px] md:text-[30px] font-bold">
             Skills
           </p>
-          <section className="grid grid-cols-4 pt-5 pr-90 pl-30">
+          <section className="grid grid-cols-4 pt-5 pl-5 pr-5 md:pl-30 md:pr-30">
             <Image
               {...images.cSharp}
               onMouseMove={HandleMouseMovement}
@@ -63,7 +63,7 @@ export default function Home() {
               onMouseLeave={HandleMouseLeave}
             />
           </section>
-          <section className="grid grid-cols-4 pt-5 pr-90 pl-30">
+          <section className="grid grid-cols-4 pt-5 pl-5 pr-5 md:pl-30 md:pr-30">
             <Image
               {...images.gitlab}
               onMouseMove={HandleMouseMovement}
@@ -80,21 +80,21 @@ export default function Home() {
               onMouseLeave={HandleMouseLeave}
             />
           </section>
-          <p className="pt-5 md:pt-30 pl-5 md:pl-30 text-[15px] md:text-[30px] font-bold">
-            View my resume
-          </p>
-          <ul className="list-disc pl-10 md:pl-35 text-[12px] md:text-[20px] underline">
-            <li>Resume (Dutch)</li>
-            <li>Resume (English)</li>
-          </ul>
         </div>
 
         <div className="relative">
-          <Image {...images.DiamondVoorUit} />
-          <Image {...images.DiamondProfile} />
-          <Image {...images.DiamondTemplate1} />
-          <Image {...images.DiamondTemplate2} />
+          <div className="hidden sm:block">
+            <Image {...images.DiamondVoorUit} />
+          </div>
+
+          <p className="mt-auto pl-5 md:pl-30 md:pt-25 pr-5 text-[15px] flex justify-end  md:text-[30px] font-bold">
+            View my resume
+          </p>
+          <ul className="mt-auto list-disc pl-10 md:pl-35 pr-5 flex justify-end text-[12px] md:text-[20px] underline">
+            Resume (English)
+          </ul>
         </div>
+
         {visible && (
           <p
             className="pointer-events-none fixed rounded-lg border border-gray-300 bg-[#f4f4f4] p-1 text-[20px] shadow-md"
