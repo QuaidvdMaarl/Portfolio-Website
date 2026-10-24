@@ -1,4 +1,3 @@
-import HandleMouseMovement from "./page.tsx";
 
 export const images = {
   cSharp: {
