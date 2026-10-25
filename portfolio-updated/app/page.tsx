@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { images } from "./Data/home-data";
+import { images } from "./data/home-data";
 import { tooltip } from "./components/Tooltip";
 
 export default function Home() {
