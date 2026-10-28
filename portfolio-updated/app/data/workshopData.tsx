@@ -1,13 +1,13 @@
 export const images = {
   Scratch: {
-    className: "w-10 sm:w-30",
+    className: "w-15 sm:w-30",
     src: "/Scratch.webp",
     alt: "Scratch",
     width: 50,
     height: 50,
   },
   Gitlab: {
-    className: "w-10 sm:w-20",
+    className: "w-15 sm:w-20",
     src: "/gitlab-logo-png-transparent.png",
     alt: "Gitlab",
     width: 50,
@@ -21,7 +21,7 @@ export const images = {
     height: 500,
   },
   GameWorkshop: {
-    className: "rounded-lg border-2 w-10 sm:w-100",
+    className: "rounded-lg border-2 w-70 sm:w-100",
     src: "/game-workshop.png",
     alt: "Game Workshop",
     width: 500,

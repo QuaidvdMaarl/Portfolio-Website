@@ -23,11 +23,10 @@ export default function NavBar() {
       ],
     },
     { name: "Community & Workshops", href: "/library/pages/Workshop" },
-    { name: "Contact", href: "/library/pages/Contact" },
   ];
 
   return (
-    <nav className="grid grid-cols-4 bg-[#232728] relative">
+    <nav className="grid grid-cols-3 bg-[#232728] relative items-center">
       {Links.map((link) => {
         // Als het een normale link is
         if (!link.isDropdown) {
