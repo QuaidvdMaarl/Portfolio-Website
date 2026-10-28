@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { images, workshopDetails } from "../../../data/workshop-data";
+import { images, workshopDetails } from "../../../data/workshopData";
 import { useState } from "react";
 
 export default function CommunityWorkshops() {
