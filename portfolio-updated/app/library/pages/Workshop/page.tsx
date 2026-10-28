@@ -3,57 +3,64 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { images } from "../../../data/workshop-data";
-import { tooltip } from "@/app/components/Tooltip";
+import { images, workshopDetails } from "../../../data/workshop-data";
+import { useState } from "react";
 
 export default function CommunityWorkshops() {
-    const { coords, visible, text, HandleMouseMovement, HandleMouseLeave } =
-      tooltip();
+  const [activeTab, setActiveTab] = useState<keyof typeof workshopDetails>("Game-workshops");
+  const currentData = workshopDetails[activeTab];
+  
+
+  const tabs: { id: keyof typeof workshopDetails; label: string; bg: string }[] = [
+    { id: "Game-workshops", label: "Game Workshops", bg: "bg-[#6f77b1]" },
+    { id: "computer-workshops", label: "Computer Workshops", bg: "bg-[#969dcf]", },
+    { id: "typing-lessons", label: "Typing Lessons", bg: "bg-[#b9bfe8]" },
+    { id: "big-events", label: "Big Events", bg: "bg-[#d4d8f3]" },
+  ];
       
   return (
     <main>
-      <section className="grid min-h-screen grid-cols-1 md:grid-cols-[70%_30%] bg-[url(/backdrop-image.png)] bg-cover bg-local bg-center">
+      <section className="grid min-h-screen grid-cols-1 md:grid-cols-[80%_20%] bg-[url(/backdrop-image.png)] bg-cover bg-local bg-center">
         <div>
           <p className="pt-5 pl-5 md:pl-10 md:pt-10 text-[30px] md:text-[70px] font-bold underline">
             COMMUNITY & WORKSHOPS
           </p>
-          <section className="grid grid-cols-4 gap-5 md:pt-10">
-            <div className="bg-[#6f77b1] p-2">
-              <p className="flex justify-center">Parachute Guys</p>
-            </div>
 
-            <div className="bg-[#969dcf] p-2">
-              <p className="flex justify-center">Computer Workshops</p>
-            </div>
-
-            <div className="bg-[#b9bfe8] p-2">
-              <p className="flex justify-center">Typing Lessons</p>
-            </div>
-
-            <div className="bg-[#d4d8f3] p-2">
-              <p className="flex justify-center">Big Events</p>
-            </div>
+          {/* Klikbare kopjes / tabs */}
+          <section className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 md:pt-10">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onPointerDown={() => setActiveTab(tab.id)}
+                type="button"
+                className={`${tab.bg} p-3 rounded transition-transform active:scale-95 touch-manipulation select-none text-left md:text-center cursor-pointer`}
+              >
+                <span className="flex justify-center text-center text-xs md:text-base">
+                  {tab.label}
+                </span>
+              </button>
+            ))}
           </section>
+
           <hr className="border-[2px] border-[#232728]" />
 
           <section className="grid grid-cols-2 pt-5 pl-5 pr-5 md:pl-5 md:pr-5 gap-5">
             <div>
               <p className="pt-5 pl-5 md:pl-10 text-[14px] md:text-[30px] font-bold">
-                PARACHUTE GUYS
+                {currentData.title}
               </p>
-              <p className="pt-5 pl-5 md:pl-10 text-[10px] md:text-[15px]">
-                This was a project where I made a game with kids to show them
-                what it's like to be a developer. Kids were allowed to fully
-                craft something they wanted.
+              <p className="pt-5 pl-5 md:pl-10 text-[10px] md:text-[15px] whitespace-pre-line">
+                {currentData.description}
               </p>
             </div>
 
             <div className="flex justify-center">
-              <Image
-                {...images.ParachuteGuys}
-                onMouseMove={HandleMouseMovement}
-                onMouseLeave={HandleMouseLeave}
-              />
+              {images[currentData.mainImage as keyof typeof images] && (
+                <Image
+                  {...images[currentData.mainImage as keyof typeof images]}
+                  alt={currentData.title}
+                />
+              )}
             </div>
           </section>
         </div>
@@ -62,34 +69,22 @@ export default function CommunityWorkshops() {
             SKILLS USED
           </p>
           <section className="grid grid-cols-2 pt-5 pl-5 pr-5 md:pl-5 md:pr-5 gap-5">
-            <Image
-              {...images.Scratch}
-              onMouseMove={HandleMouseMovement}
-              onMouseLeave={HandleMouseLeave}
-            />
-            <Image
-              {...images.Gitlab}
-              onMouseMove={HandleMouseMovement}
-              onMouseLeave={HandleMouseLeave}
-            />
+            <Image {...images.Scratch} />
+            <Image {...images.Gitlab} />
           </section>
 
-          <div className="pl-5 pt-40 grid grid-cols-[30%_70%] gap-5">
-            <Image
-              {...images.Scratch}
-              onMouseMove={HandleMouseMovement}
-              onMouseLeave={HandleMouseLeave}
-            />
-            <p className="pb-50">
-              Scratch was used to learn kids the fundamentals of programming
-            </p>
-
-            <Image
-              {...images.Scratch}
-              onMouseMove={HandleMouseMovement}
-              onMouseLeave={HandleMouseLeave}
-            />
-            <p>Hello</p>
+          <div className="pl-5 pt-30 pr-5 grid grid-cols-[30%_70%] gap-5">
+            {currentData.skills.map((skill, index) => (
+              <div key={index} className="contents">
+                {images[skill.image as keyof typeof images] && (
+                  <Image
+                    {...images[skill.image as keyof typeof images]}
+                    alt="Skill icon"
+                  />
+                )}
+                <p className={index === 0 ? "pb-10" : ""}>{skill.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
