@@ -42,7 +42,7 @@ export const images = {
 
   github: {
     className: "w-10 sm:w-15",
-    src: "/gitHub.png",
+    src: "/github.png",
     alt: "GitHub",
     width: 50,
     height: 120,

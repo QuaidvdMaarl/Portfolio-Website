@@ -8,7 +8,7 @@ export const images = {
   },
   Gitlab: {
     className: "w-10 sm:w-20",
-    src: "/Gitlab-logo-png-transparent.png",
+    src: "/gitlab-logo-png-transparent.png",
     alt: "Gitlab",
     width: 50,
     height: 50,
