@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { images, workshopDetails } from "../../../data/workshopData";
 import { useState } from "react";
@@ -16,11 +15,6 @@ export default function CommunityWorkshops() {
     bg: string;
   }[] = [
     { id: "Game-workshops", label: "Game Workshops", bg: "bg-[#6f77b1]" },
-    {
-      id: "computer-workshops",
-      label: "Computer Workshops",
-      bg: "bg-[#969dcf]",
-    },
     { id: "typing-lessons", label: "Typing Lessons", bg: "bg-[#b9bfe8]" },
     { id: "big-events", label: "Big Events", bg: "bg-[#d4d8f3]" },
   ];
@@ -28,14 +22,12 @@ export default function CommunityWorkshops() {
   return (
     <main>
       <section className="grid min-h-screen grid-cols-1 md:grid-cols-[80%_20%] bg-[url(/backdrop-image.png)] bg-cover bg-local bg-center">
-        {/* LINKERKANT (Main Content voor zowel mobiel als desktop) */}
         <div className="p-5 md:p-0">
           <p className="pt-2 md:pt-10 md:pl-10 text-[24px] md:text-[70px] font-bold underline text-center md:text-left">
             COMMUNITY & WORKSHOPS
           </p>
 
-          {/* Klikbare kopjes / tabs */}
-          <section className="grid grid-cols-4 gap-2 pt-2 md:gap-5 md:pt-10 md:pl-10">
+          <section className="grid grid-cols-3 gap-2 pt-2 md:gap-5 md:pt-10 md:pl-10">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -50,10 +42,8 @@ export default function CommunityWorkshops() {
             ))}
           </section>
 
-          {/* De zwarte streep */}
           <hr className="border-[1px] md:border-[2px] border-[#232728] my-3 md:ml-10" />
 
-          {/* Workshop Content (Titel, beschrijving & plaatje) */}
           <section className="grid grid-cols-1 md:grid-cols-2 pt-2 pl-2 pr-2 md:pl-10 md:pr-5 gap-5">
             <div>
               <p className="text-[14px] md:text-[30px] font-bold">
@@ -74,12 +64,11 @@ export default function CommunityWorkshops() {
             </div>
           </section>
 
-          {/* SKILLS USED - ALLEEN VOOR MOBIEL (komt automatisch onder de streep en content) */}
           <div className="block md:hidden pt-8 px-2">
             <p className="text-[14px] font-bold pb-3">SKILLS USED</p>
             <div className="hidden md:block grid grid-cols-2 gap-3 pb-5">
-              <Image {...images.Scratch} />
-              <Image {...images.Gitlab} />
+              <Image {...images.Scratch} alt="Scratch" />
+              <Image {...images.Gitlab} alt="Gitlab" />
             </div>
             <div className="grid grid-cols-[30%_70%] gap-3 items-center">
               {currentData.skills.map((skill, index) => (
@@ -97,12 +86,11 @@ export default function CommunityWorkshops() {
           </div>
         </div>
 
-        {/* RECHTERKANT - ALLEEN VOOR DESKTOP (20% kolom op grote schermen) */}
         <div className="hidden md:block p-0 pt-10 pr-5">
           <p className="text-[30px] font-bold pl-5">SKILLS USED</p>
           <div className="grid grid-cols-2 pt-5 pl-5 gap-5">
-            <Image {...images.Scratch} />
-            <Image {...images.Gitlab} />
+            <Image {...images.Scratch} alt="Scratch" />
+            <Image {...images.Gitlab} alt="Gitlab" />
           </div>
 
           <div className="pt-30 pl-5 grid grid-cols-[30%_70%] gap-5 items-center">
