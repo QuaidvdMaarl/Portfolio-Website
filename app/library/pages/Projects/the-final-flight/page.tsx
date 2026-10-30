@@ -84,7 +84,7 @@ export default function Project2() {
 
         <div className="hidden md:block p-0 pt-10 pr-5">
           <p className="text-[30px] font-bold pl-5">SKILLS USED</p>
-          <div className="grid grid-cols-3 pt-5 pl-5 gap-5">
+          <div className="grid grid-cols-3 pt-5 pl-5 gap-5 place-items-center">
             <Image {...images.Unity} alt="Unity" />
             <Image {...images.CSharp} alt="C#" />
             <Image {...images.gitlab} alt="GitLab" />

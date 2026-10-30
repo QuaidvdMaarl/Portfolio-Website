@@ -71,6 +71,14 @@ export const images = {
     height: 50,
   },
 
+  Unity: {
+    className: "w-15 sm:w-15",
+    src: "/unity-logo.webp",
+    alt: "Unity",
+    width: 50,
+    height: 50,
+  },
+
   Diamonds: {
     className: "animate-spin animate-spin:active",
     src: "/diamonds.png",
@@ -93,8 +101,8 @@ export const images = {
       "transition-transform duration-300 hover:scale-110 mx-auto block pt-10",
     src: "/VoorUit-glossy.png",
     alt: "Diamonds picture",
-    width: 500,
-    height: 500,
+    width: 470,
+    height: 470,
   },
   DiamondTemplate1: {
     className: "transition-transform duration-300 hover:scale-110",

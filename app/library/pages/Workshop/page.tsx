@@ -66,7 +66,7 @@ export default function CommunityWorkshops() {
 
           <div className="block md:hidden pt-8 px-2">
             <p className="text-[14px] font-bold pb-3">SKILLS USED</p>
-            <div className="hidden md:block grid grid-cols-2 gap-3 pb-5">
+            <div className="hidden md:block grid grid-cols-2 gap-3 pb-5 place-items-center">
               <Image {...images.Scratch} alt="Scratch" />
               <Image {...images.Gitlab} alt="Gitlab" />
             </div>

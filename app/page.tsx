@@ -85,6 +85,11 @@ export default function Home() {
               onMouseLeave={HandleMouseLeave}
             />
             <Image
+              {...images.Unity}
+              onMouseMove={HandleMouseMovement}
+              onMouseLeave={HandleMouseLeave}
+            />
+            <Image
               {...images.Flutter}
               onMouseMove={HandleMouseMovement}
               onMouseLeave={HandleMouseLeave}
@@ -97,12 +102,12 @@ export default function Home() {
             <Image {...images.DiamondVoorUit} />
           </div>
 
-          <p className="mt-auto pl-5 md:pl-30 md:pt-10 pr-5 text-[15px] flex justify-end  md:text-[30px] font-bold">
+          <p className="mt-auto pl-5 md:pl-30 md:pt-20 pr-5 text-[15px] flex justify-end  md:text-[30px] font-bold">
             View my resume
           </p>
           <a
             href="/resume.pdf"
-            download="Mijn_CV.pdf"
+            download="resume.pdf"
             className="mt-auto list-disc pl-10 md:pl-35 pr-5 flex justify-end text-[12px] md:text-[20px] underline"
           >
             Download Resume
