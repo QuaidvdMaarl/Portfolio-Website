@@ -6,7 +6,7 @@
   
   export default function Project2() {
     const [activeTab, setActiveTab] =
-      useState<keyof typeof BYCSDetails>("tech-stack");
+      useState<keyof typeof BYCSDetails>("assignment");
     const currentData = BYCSDetails[activeTab];
   
     const tabs: {
@@ -14,9 +14,7 @@
       label: string;
       bg: string;
     }[] = [
-      { id: "tech-stack", label: "Tech Stack", bg: "bg-[#6f77b1]" },
-      { id: "design-ux", label: "Design & UX", bg: "bg-[#b9bfe8]" },
-      { id: "next-steps", label: "Next Steps", bg: "bg-[#d4d8f3]" },
+      { id: "assignment", label: "Current Project", bg: "bg-[#6f77b1]" },
     ];
   
     return (
@@ -24,10 +22,10 @@
         <section className="grid min-h-screen grid-cols-1 md:grid-cols-[80%_20%] bg-[url(/backdrop-image.png)] bg-cover bg-local bg-center">
           <div className="p-5 md:p-0">
             <p className="pt-2 md:pt-10 md:pl-10 text-[24px] md:text-[70px] font-bold underline text-center md:text-left">
-              COMMUNITY & WORKSHOPS
+              BYCS
             </p>
-  
-            <section className="grid grid-cols-3 gap-2 pt-2 md:gap-5 md:pt-10 md:pl-10">
+
+            <section className="grid grid-cols-1 gap-2 pt-2 md:gap-5 md:pt-10 md:pl-10">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -41,9 +39,9 @@
                 </button>
               ))}
             </section>
-  
+
             <hr className="border-[1px] md:border-[2px] border-[#232728] my-3 md:ml-10" />
-  
+
             <section className="grid grid-cols-1 md:grid-cols-2 pt-2 pl-2 pr-2 md:pl-10 md:pr-5 gap-5">
               <div>
                 <p className="text-[14px] md:text-[30px] font-bold">
@@ -53,7 +51,7 @@
                   {currentData.description}
                 </p>
               </div>
-  
+
               <div className="flex justify-center items-start">
                 {images[currentData.mainImage as keyof typeof images] && (
                   <Image
@@ -63,7 +61,7 @@
                 )}
               </div>
             </section>
-  
+
             <div className="block md:hidden pt-8 px-2">
               <p className="text-[14px] font-bold pb-3">SKILLS USED</p>
               <div className="grid grid-cols-[30%_70%] gap-3 items-center">
@@ -81,16 +79,14 @@
               </div>
             </div>
           </div>
-  
+
           <div className="hidden md:block p-0 pt-10 pr-5">
             <p className="text-[30px] font-bold pl-5">SKILLS USED</p>
-            <div className="grid grid-cols-3 pt-5 pl-5 gap-5">
-              <Image {...images.Unity} alt="Unity" />
-              <Image {...images.CSharp} alt="C#" />
-              <Image {...images.gitlab} alt="GitLab" />
-              <Image {...images.blender} alt="Blender" />
+            <div className="grid grid-cols-2 pt-5 pl-5 gap-5 place-items-center">
+              <Image {...images.Flutter} alt="Unity" />
+              <Image {...images.Dart} alt="C#" />
             </div>
-  
+
             <div className="pt-30 pl-5 grid grid-cols-[30%_70%] gap-5 items-center">
               {currentData.skills.map((skill, index) => (
                 <div key={index} className="contents">
