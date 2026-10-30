@@ -50,8 +50,8 @@ export const images = {
   },
 };
 
-export const workshopDetails = {
-  concept: {
+export const finalFlightDetails = {
+  "concept": {
     title: "CONCEPT",
     description: `The Final Flight is a game that was created during one of my first weeks of school in 2025, because of our assignment. We needed to create 3D flappy bird in Unity. That was our only requirement.
     

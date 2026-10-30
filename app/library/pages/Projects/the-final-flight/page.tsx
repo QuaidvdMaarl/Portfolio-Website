@@ -1,16 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { images, workshopDetails } from "../../../../data/projects/theFinalFlightData";
+import { images, finalFlightDetails } from "../../../../data/projects/theFinalFlightData";
 import { useState } from "react";
 
 export default function Project2() {
   const [activeTab, setActiveTab] =
-    useState<keyof typeof workshopDetails>("concept");
-  const currentData = workshopDetails[activeTab];
+    useState<keyof typeof finalFlightDetails>("concept");
+  const currentData = finalFlightDetails[activeTab];
 
   const tabs: {
-    id: keyof typeof workshopDetails;
+    id: keyof typeof finalFlightDetails;
     label: string;
     bg: string;
   }[] = [
@@ -24,7 +24,7 @@ export default function Project2() {
       <section className="grid min-h-screen grid-cols-1 md:grid-cols-[80%_20%] bg-[url(/backdrop-image.png)] bg-cover bg-local bg-center">
         <div className="p-5 md:p-0">
           <p className="pt-2 md:pt-10 md:pl-10 text-[24px] md:text-[70px] font-bold underline text-center md:text-left">
-            COMMUNITY & WORKSHOPS
+            THE FINAL FLIGHT
           </p>
 
           <section className="grid grid-cols-3 gap-2 pt-2 md:gap-5 md:pt-10 md:pl-10">

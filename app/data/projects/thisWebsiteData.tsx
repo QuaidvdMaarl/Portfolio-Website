@@ -1,56 +1,114 @@
 export const images = {
-
+  React: {
+    className: "w-15 sm:w-15",
+    src: "/React-icon.svg.webp",
+    alt: "react",
+    width: 50,
+    height: 50,
+  },
+  Typescript: {
+    className: "w-15 sm:w-15",
+    src: "/Typescript.png",
+    alt: "Typescript",
+    width: 50,
+    height: 50,
+  },
+  Tailwind: {
+    className: "w-15 sm:w-15",
+    src: "/tailwind.png",
+    alt: "tailwind",
+    width: 50,
+    height: 50,
+  },
+  Github: {
+    className: "w-15 sm:w-15",
+    src: "/github.png",
+    alt: "tailwind",
+    width: 50,
+    height: 50,
+  },
+  Python: {
+    className: "w-15 sm:w-15",
+    src: "/Python.png",
+    alt: "python",
+    width: 50,
+    height: 50,
+  },
+  Streamlit: {
+    className: "w-15 sm:w-25",
+    src: "/streamlit-logo.png",
+    alt: "Streamlit",
+    width: 50,
+    height: 50,
+  },
+  UI: {
+    className: "rounded-lg w-70 sm:w-130",
+    src: "/UI-this-website.png",
+    alt: "UI-image",
+    width: 500,
+    height: 500,
+  },
+  MapStructure: {
+    className: "rounded-lg w-70 sm:w-130",
+    src: "/screenshot-map-structure.png",
+    alt: "MapStructure",
+    width: 500,
+    height: 500,
+  },
+  CareAnimations: {
+    className: "rounded-lg w-70 sm:w-200",
+    src: "/care-animations.png",
+    alt: "care-animations",
+    width: 500,
+    height: 500,
+  },
 };
 
-export const workshopDetails = {
-  "Game-workshops": {
-    title: "GAME WORKSHOPS",
-    description: `In this game workshop, kids learned the basics of block-based programming in 10 weeks while using Scratch. They created their own interactive games and animations, fostering creativity and problem-solving skills.
+export const thisWebsiteDetails = {
+  "tech-stack": {
+    title: "Tech Stack",
+    description: `For this portfolio website, I chose a tech stack that I haven't worked with before a lot. Typescript and tailwind were mostly new to me. I wanted to do this to improve my skills in these languages.
     
-    The first week was all about inspiration and drawing our ideas on paper. After that we started programming in scratch. Most of the kids had never programmed before, so we started with the basics. The kids learned how to use loops and moving sprites around the screen. They were very enthusiastic about the workshops and wanted to learn more. The kids quickly realised how much goes into programming a game. I love creating an environment where kids can explore, learn and eventually help other kids. 
-    
-    The final week was all about presenting our games to each other. Most kids were very proud of their games and wanted to show them to everyone. Some kids even wanted to work on their games at home after our workshops. It was a great experience to see the kids learn and grow over the 10 weeks.`,
-    mainImage: "GameWorkshop",
+    I love stepping out of my comfort zone a bit. Building this portfolio gave me the chance to master these languages hands-on. Working with TypeScript helped me write more structured and predictable code, while Tailwind allowed me to rapidly iterate on designs without getting bogged down in traditional CSS files. It turned out to be a great way to level up my front-end development skills while bringing the whole site to life.`,
+    mainImage: "MapStructure",
     skills: [
       {
-        image: "Scratch",
-        text: "Scratch was used to learn kids the fundamentals of programming",
+        image: "React",
+        text: "Chosen as a powerful foundation for the structure and for building reusable components, such as the dynamic tab navigation on the project pages.",
       },
       {
-        image: "Gitlab",
-        text: "Gitlab was used to manage project and store useful information on the wiki.",
+        image: "Tailwind",
+        text: "I used Tailwind for responsive CSS styling. This way I could easily program good looking UI without too much effort.",
+      },
+      {
+        image: "Typescript",
+        text: "Applied to enforce strict typing, which keeps the code clean, prevents errors, and ensures a solid, scalable codebase.",
       },
     ],
   },
-  "typing-lessons": {
-    title: "TYPING LESSONS",
-    description: `In this typing course, kids learned how to type faster and more accurately for free. The kids learned how to type without looking at the keyboard and how to use all their fingers. 
-      
-      I decided to create this typing course because schools in the neighborhood were asking a €100 for a typing course. I live in a neighbourhood where a lot of parents don't have this amount of money to spend on a typing course. In an era where typing is an essential skill, I wanted to make sure that all kids have the opportunity to learn how to type for free. 
-
-      The kids learned quickly how to type faster. To my surprise, the kids were very enthusiastic about the typing course and were racing each other to see who could type the fastest. I was very proud to see that I could make a difference and give kids the opportunity to learn how to type faster.
-      `,
-    mainImage: "TypingLessons",
+  "design-ux": {
+    title: "Design & UX",
+    description: `Before realising the pages. I used canva to sketch them first. After I got the base of my project set-up I went back to the drawing board in Canva. I made a screenshot of my website and designed it how I wanted it to look. The screenshot shows this proces by showing the concept art of the game workshop.`,
+    mainImage: "UI",
     skills: [
       {
-        image: "Edclub",
-        text: "Edclub was used to teach kids how to type faster and more accurately.",
+        image: "Tailwind",
+        text: "I used Tailwind for responsive CSS styling. This way I could easily program good looking UI without too much effort.",
       },
     ],
   },
-  "big-events": {
-    title: "BIG EVENTS",
-    description: `Once every few months, we organize big events for everyone in the neighborhood. Events like this are a great way to bring the community together, but also to invest in new equipment.
-
-      The picture shows an event that I organized with my team. The thing that made this event so special was that we held a roblox event (and a an ice cream cart). The kids could play a variety of roblox games together, but we mostly played hide and seek. The kids were very excited about this event for weeks. We also got way more kids than we initially expected, so it was am operational challenge to make sure everyone got their turn to play.
-      
-      Another reason for me to organize events like these is to purchase new equipment which we normally couldn't afford as a non-profit organisation. This time around we really needed new laptops for our typing lessons, so we needed to get a bit creative. We needed to incorporate laptops in our event in some way. For months I heard about kids that wanted to play roblox with each other during our other activities. I thought it would be a great idea to organize a roblox event for all the kids in the neighborhood. This way, we had something that would attract a lot of kids, but also a good reason to get new laptops that we could use for our other activities.
-`,
-    mainImage: "BigEvents",
+  "next-steps": {
+    title: "Next Steps",
+    description: `Right now there are a few things I am working on. Currently I'm doing a semester in Social Impact apps where I work together with BYCS to make an app for cycling acitivities all around the world. When that project is finished I will add that to my portfolio. I also want to add an older project for CareAnimations (see screenshot). This was a project where we needed to build a dashboard that showed a lot of information. The dashboard that was most interesting to me, is the one on the screenshot. It's a dashboard that shows words that people filled in a lot in question forums. This is a way to show qualitive data. With that being said, there is still a lot that I can add to this portfolio.`,
+    mainImage: "CareAnimations",
     skills: [
       {
-        image: "SamenNieuwWest",
-        text: "Samen Nieuw West organized the Nieuw West Fest, which was a great opportunity to bring our community together and invest in new equipment.",
+        image: "Python",
+        text: "Python was used for CareAnimations. This was a project where I needed to make multiple dashboards that contained a lot of information",
+      },
+      {
+        image: "Streamlit",
+        text: "Streamlit was used for the dashboard itself. This is an easy platform to build dashboards on.",
       },
     ],
   },
