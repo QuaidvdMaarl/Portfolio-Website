@@ -56,6 +56,21 @@ export const images = {
     height: 50,
   },
 
+  Dart: {
+    className: "w-20",
+    src: "/dart-logo.png",
+    alt: "Dart",
+    width: 50,
+    height: 50,
+  },
+  Flutter: {
+    className: "w-20 flex",
+    src: "/flutter-logo.png",
+    alt: "Flutter",
+    width: 50,
+    height: 50,
+  },
+
   Diamonds: {
     className: "animate-spin animate-spin:active",
     src: "/diamonds.png",
@@ -67,14 +82,15 @@ export const images = {
   DiamondProfile: {
     className:
       "animate-spin animate-spin:active z-1 transition-transform duration-300 hover:scale-110",
-    src: "/glossy-Quaid.png",
+    src: "/quaid-diamond.png",
     alt: "Diamonds picture",
     width: 100,
     height: 100,
   },
 
   DiamondVoorUit: {
-    className: "transition-transform duration-300 hover:scale-110",
+    className:
+      "transition-transform duration-300 hover:scale-110 mx-auto block pt-10",
     src: "/VoorUit-glossy.png",
     alt: "Diamonds picture",
     width: 500,
